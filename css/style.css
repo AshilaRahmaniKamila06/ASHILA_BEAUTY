@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #fbf7f3;
+    --blush: #f3e5e0;
+    --rose: #c98d91;
+    --rose-dark: #9e626d;
+    --ink: #332b29;
+    --muted: #887d78;
+    --line: #eadfda;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: var(--rose-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+.ashila_header {
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.ashila_topbar {
+    background: var(--rose-dark);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.ashila_nav {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.ashila_logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ashila_logo span {
+    color: var(--rose);
+}
+
+.ashila_menu {
+    display: flex;
+    gap: 27px;
+}
+
+.ashila_menu a {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.ashila_menu a:hover,
+.ashila_menu a.active {
+    color: var(--rose-dark);
+}
+
+.ashila_cart_link {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ashila_cart_count {
+    background: var(--blush);
+    border-radius: 50%;
+    padding: 5px 8px;
+}
+
+.ashila_menu_toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ashila_hero {
+    background: var(--cream);
+}
+
+.ashila_hero_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.ashila_hero_copy h1 {
+    font-size: 76px;
+    margin-bottom: 22px;
+}
+
+.ashila_hero_copy h1 em,
+.ashila_page_hero h1 em,
+.ashila_promo_hero h1 em {
+    color: var(--rose-dark);
+    font-weight: 500;
+}
+
+.ashila_hero_copy > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 450px;
+}
+
+.ashila_actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.ashila_btn {
+    display: inline-block;
+    background: var(--rose-dark);
+    color: white;
+    border: none;
+    padding: 13px 23px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ashila_btn:hover {
+    background: var(--ink);
+}
+
+.ashila_text_link {
+    font-size: 11px;
+    border-bottom: 1px solid var(--rose);
+    padding-bottom: 4px;
+}
+
+.ashila_hero_note {
+    margin-top: 60px;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.ashila_hero_visual {
+    position: relative;
+    height: 490px;
+}
+
+.ashila_hero_photo {
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1000&q=85');
+    background-size: cover;
+    background-position: center;
+}
+
+.ashila_round_stamp {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background: var(--rose-dark);
+    color: white;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.ashila_float_card {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    background: white;
+    padding: 20px 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    box-shadow: 0 10px 30px #00000010;
+}
+
+.ashila_section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.ashila_section_head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.ashila_category_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.ashila_category {
+    min-height: 280px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    isolation: isolate;
+}
+
+.ashila_category::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #251a1a99, transparent);
+    z-index: -1;
+}
+
+.ashila_category span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.ashila_category b {
+    font: 600 30px 'Playfair Display';
+}
+
+.ashila_category small {
+    font-size: 11px;
+}
+
+.ashila_cat_skin {
+    background-image: url('https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_cat_make {
+    background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_cat_body {
+    background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_soft_section {
+    background: var(--cream);
+}
+
+.ashila_product_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.ashila_product_card {
+    background: white;
+    padding-bottom: 17px;
+}
+
+.ashila_product_card a {
+    display: block;
+}
+
+.ashila_product_image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.ashila_product_image span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: white;
+    padding: 6px 9px;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.ashila_product_card h3 {
+    font-size: 17px;
+    margin: 15px 12px 3px;
+}
+
+.ashila_product_card > p {
+    color: var(--muted);
+    font-size: 10px;
+    margin: 0 12px;
+}
+
+.ashila_product_price {
+    margin: 10px 12px 0;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ashila_add {
+    background: var(--blush);
+    border: 0;
+    padding: 7px 10px;
+    cursor: pointer;
+    color: var(--rose-dark);
+    font-size: 10px;
+}
+
+.ashila_quote {
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.ashila_quote h2 {
+    font-size: 32px;
+    font-style: italic;
+    max-width: 750px;
+    margin: auto;
+}
+
+.ashila_quote span {
+    display: block;
+    margin-top: 25px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose-dark);
+}
+
+.ashila_footer {
+    background: #302725;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.ashila_footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ashila_footer_inner p {
+    font-size: 11px;
+    color: #c9bdb8;
+}
+
+.ashila_footer_inner > div {
+    display: flex;
+    gap: 20px;
+}
+
+.ashila_footer_inner > div a {
+    font-size: 10px;
+}
+
+.ashila_footer .ashila_logo {
+    color: white;
+}
+
+.ashila_footer > small {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 9px;
+    color: #b6a7a0;
+}
+
+.ashila_page_hero {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.ashila_page_hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.ashila_page_hero > p:last-child {
+    max-width: 520px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.ashila_about_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.ashila_about_image {
+    height: 470px;
+    background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.ashila_about_grid h2 {
+    margin-bottom: 22px;
+}
+
+.ashila_about_grid p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.ashila_value_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.ashila_value_grid article {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+.ashila_value_grid article span {
+    color: var(--rose-dark);
+    font-size: 10px;
+}
+
+.ashila_value_grid h3 {
+    margin: 15px 0;
+    font-size: 21px;
+}
+
+.ashila_value_grid p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.ashila_shop_tools {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ashila_shop_tools input {
+    border: 1px solid var(--line);
+    padding: 12px 15px;
+    min-width: 230px;
+    outline-color: var(--rose);
+}
+
+.ashila_filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ashila_filter {
+    background: var(--cream);
+    border: 0;
+    padding: 10px 17px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.ashila_filter.active {
+    background: var(--rose-dark);
+    color: white;
+}
+
+.ashila_empty {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
+
+.ashila_detail_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 100px;
+}
+
+.ashila_detail_image {
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ashila_detail_copy {
+    align-self: center;
+}
+
+.ashila_detail_copy h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.ashila_detail_copy h3 {
+    font: 700 20px 'DM Sans';
+    color: var(--rose-dark);
+    margin-bottom: 25px;
+}
+
+.ashila_detail_copy > p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.ashila_detail_copy button {
+    margin-top: 10px;
+}
+
+.ashila_promo_hero {
+    background: var(--blush);
+    padding: 95px 0;
+}
+
+.ashila_promo_hero h1 {
+    font-size: 70px;
+}
+
+.ashila_promo_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.ashila_promo_card {
+    background: #f3e4e0;
+    padding: 30px;
+    min-height: 260px;
+}
+
+.ashila_promo_card span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.ashila_promo_card strong {
+    display: block;
+    font: 600 32px 'Playfair Display';
+    color: var(--rose-dark);
+    margin: 24px 0 5px;
+}
+
+.ashila_promo_card h3 {
+    margin: 0;
+    font: 600 21px 'Playfair Display';
+}
+
+.ashila_promo_card p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.ashila_promo_card code {
+    background: #fff;
+    padding: 7px 10px;
+    font-size: 11px;
+}
+
+.ashila_promo_alt {
+    background: #eee7df;
+}
+
+.ashila_promo_third {
+    background: #ead8d3;
+}
+
+.ashila_disclaimer {
+    font-size: 10px;
+    color: #998e89;
+    margin-top: 25px;
+}
+
+.ashila_gallery_grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 260px 260px;
+    gap: 18px;
+}
+
+.ashila_gallery_tile {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 25px;
+    color: white;
+    position: relative;
+}
+
+.ashila_gallery_tile:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #211919a8, transparent);
+}
+
+.ashila_gallery_tile > * {
+    position: relative;
+}
+
+.ashila_gallery_tile span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.ashila_gallery_tile b {
+    font: 600 27px 'Playfair Display';
+}
+
+.ashila_gallery_one {
+    background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80');
+}
+
+.ashila_gallery_two {
+    background-image: url('https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_gallery_three {
+    background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_gallery_four {
+    background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80');
+}
+
+.ashila_testimonial_grid blockquote {
+    font: italic 16px 'Playfair Display';
+    color: var(--ink);
+}
+
+.ashila_testimonial_grid cite {
+    display: block;
+    font: 10px 'DM Sans';
+    color: var(--rose-dark);
+    margin-top: 18px;
+}
+
+.ashila_contact_grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+    padding-bottom: 100px;
+}
+
+.ashila_contact_info > p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.ashila_contact_line {
+    border-top: 1px solid var(--line);
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.ashila_contact_line span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--rose-dark);
+}
+
+.ashila_contact_line b {
+    font-size: 12px;
+}
+
+.ashila_form {
+    background: var(--cream);
+    padding: 35px;
+    display: grid;
+    gap: 16px;
+}
+
+.ashila_form label {
+    font-size: 11px;
+    font-weight: 700;
+    display: grid;
+    gap: 7px;
+}
+
+.ashila_form input,
+.ashila_form select,
+.ashila_form textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: #fff;
+    padding: 12px;
+    font-size: 12px;
+    outline-color: var(--rose);
+}
+
+.ashila_form textarea {
+    resize: vertical;
+}
+
+.ashila_form .ashila_btn {
+    justify-self: start;
+}
+
+.ashila_form_feedback {
+    font-size: 12px;
+    color: var(--rose-dark);
+    margin: 0;
+}
+
+@media(max-width:850px) {
+    .ashila_menu {
+        gap: 13px;
+    }
+
+    .ashila_menu a {
+        font-size: 10px;
+    }
+
+    .ashila_hero_grid {
+        gap: 25px;
+    }
+
+    .ashila_product_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ashila_contact_grid {
+        gap: 35px;
+    }
+}
+
+@media(max-width:650px) {
+    .ashila_nav {
+        height: 70px;
+    }
+
+    .ashila_menu_toggle {
+        display: block;
+        order: 3;
+    }
+
+    .ashila_cart_link {
+        margin-left: auto;
+    }
+
+    .ashila_menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 18px 5%;
+        box-shadow: 0 10px 20px #00000010;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ashila_menu.open {
+        display: flex;
+    }
+
+    .ashila_menu a {
+        font-size: 13px;
+    }
+
+    .ashila_hero_grid {
+        grid-template-columns: 1fr;
+        padding: 55px 0 35px;
+    }
+
+    .ashila_hero_visual {
+        height: 340px;
+    }
+
+    .ashila_hero_note {
+        margin-top: 35px;
+    }
+
+    .ashila_category_grid,
+    .ashila_value_grid,
+    .ashila_testimonial_grid,
+    .ashila_promo_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ashila_category {
+        min-height: 220px;
+    }
+
+    .ashila_section {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .ashila_section_head {
+        align-items: start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .ashila_footer_inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ashila_footer_inner > div {
+        justify-content: center;
+    }
+
+    .ashila_page_hero {
+        padding-top: 60px;
+    }
+
+    .ashila_page_hero h1,
+    .ashila_promo_hero h1 {
+        font-size: 50px;
+    }
+
+    .ashila_about_grid,
+    .ashila_detail_grid,
+    .ashila_contact_grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ashila_about_image {
+        height: 320px;
+    }
+
+    .ashila_shop_tools {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ashila_gallery_grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 220px);
+    }
+
+    .ashila_form {
+        padding: 22px;
+    }
+
+    .ashila_quote {
+        padding: 65px 5%;
+    }
+}
